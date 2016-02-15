@@ -1,5 +1,5 @@
 //
-// Easy.cs
+// Frog.cs
 //
 // Author:
 //       Ehouarn Perret <ehouarn.perret@outlook.com>
@@ -29,45 +29,24 @@ using System;
 namespace EhouarnPerret.CSharp.TestDome.Sandbox
 {
 
-    public static class Easy
+    public class Frog
     {
-        public static Int32 IndexOfLongestRun(this String value)
+        public static Int32 NumberOfWays(Int32 n)
         {
-            var currentRunLength = 0;
-            var currentRunIndex = 0;
-
-            var longestRunLength = 0;
-            var longestRunIndex = 0;
-
-            for (var i = 1; i < value.Length; i++)
+            if (n <= 2)
             {
-                var currentCharacter = value[i];
-                var previousCharacter = value[i - 1];
-
-                if (previousCharacter == currentCharacter)
-                {
-                    currentRunLength++;
-                }
-                else
-                {
-                    if (longestRunLength < currentRunLength)
-                    {
-                        longestRunLength = currentRunLength;
-                        longestRunIndex = currentRunIndex;
-                    }
-
-                    currentRunLength = 0;
-                    currentRunIndex = i;
-                }
+                return n;
             }
-
-            if (longestRunLength < currentRunLength)
+            else
             {
-                longestRunLength = currentRunLength;
-                longestRunIndex = currentRunIndex ;
+                return Frog.NumberOfWays(n - 1) + Frog.NumberOfWays(n - 2);
             }
+        }
 
-            return longestRunIndex;
+        public static void Main(params String[] args)
+        {
+            Console.WriteLine(NumberOfWays(3));
         }
     }
+
 }
