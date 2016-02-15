@@ -1,0 +1,12 @@
+﻿<Properties StartupItem="EhouarnPerret.CSharp.TestDome.Sandbox\EhouarnPerret.CSharp.TestDome.Sandbox.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="EhouarnPerret.CSharp.TestDome.Sandbox\Program.cs">
+    <Files>
+      <File FileName="EhouarnPerret.CSharp.TestDome.Sandbox\Program.cs" Line="14" Column="10" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
