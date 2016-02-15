@@ -12,6 +12,9 @@ namespace EhouarnPerret.CSharp.TestDome.Sandbox
     {
         public static void Main(params String[] args)
         {
+
+            Console.ReadKey();
         }
     }
+
 }
