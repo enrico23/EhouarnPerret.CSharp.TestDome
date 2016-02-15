@@ -1,4 +1,4 @@
-//
+    //
 // Frog.cs
 //
 // Author:
@@ -31,7 +31,26 @@ namespace EhouarnPerret.CSharp.TestDome.Sandbox
 
     public class Frog
     {
-        public static Int32 NumberOfWays(Int32 n)
+
+//        public static Int32 NumberOfWays(Int32 n)
+//        {
+//            if (n <= 2)
+//            {
+//                return n;
+//            }
+//            else
+//            {
+//                var n2 = 1;
+//                var n1 = 2;
+//
+//                for (var i = 2; i < n; i++)
+//                {
+//                    
+//                }
+//            }
+//        }
+
+        public static Int32 NaiveRecursiveNumberOfWays(Int32 n)
         {
             if (n <= 2)
             {
@@ -39,13 +58,15 @@ namespace EhouarnPerret.CSharp.TestDome.Sandbox
             }
             else
             {
-                return Frog.NumberOfWays(n - 1) + Frog.NumberOfWays(n - 2);
+                return Frog.NaiveRecursiveNumberOfWays(n - 1) + Frog.NaiveRecursiveNumberOfWays(n - 2);
             }
         }
 
+        private static Int32[] Memoization { get; set; }
+
         public static void Main(params String[] args)
         {
-            Console.WriteLine(NumberOfWays(3));
+            Console.WriteLine(Frog.NumberOfWays(3));
         }
     }
 
